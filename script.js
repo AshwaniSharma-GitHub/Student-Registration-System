@@ -13,6 +13,13 @@ function addStudent(event) {
         return;
     }
 
+    // Check that name contains only alphabets
+    const nameCheck = /^[A-Za-z\s]+$/;
+    if (!nameCheck.test(name)) {
+        alert('Student Name contain only letters.');
+        return;
+    }
+
     // Validation for ID and contact number length
     if (id.length !== 5 || isNaN(id)) {
         alert('Student ID must be in 5 digits.');
@@ -41,6 +48,8 @@ function addStudent(event) {
     document.getElementById('studentForm').reset();
 }
 
+// for display registered students
+
 function displayStudents() {
     let students = JSON.parse(localStorage.getItem('students')) || [];
     let tbody = document.querySelector('#studentsTable tbody');
@@ -63,6 +72,8 @@ function displayStudents() {
     });
 }
 
+// for edit student
+
 function editStudent(index) {
     let students = JSON.parse(localStorage.getItem('students'));
     let student = students[index];
@@ -76,6 +87,8 @@ function editStudent(index) {
     localStorage.setItem('students', JSON.stringify(students));
     displayStudents();
 }
+
+// for delete student
 
 function deleteStudent(index) {
     let students = JSON.parse(localStorage.getItem('students'));
