@@ -1,0 +1,204 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #dfdddd;
+    color: #333;
+}
+
+.logo-container {
+    align-items: center;
+    justify-content: center;
+}
+  
+.logo {
+    width: 90px; 
+    height: auto;
+}
+
+header {
+    text-align: center;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding-bottom: 1px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.registration-container {
+    width: 25%;
+}
+
+.records-container {
+    width: 70%;
+    margin-right: 20px;
+    border-radius: 10px;
+    max-height: 525px;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Registration Form */
+
+#registration-form {
+    background-color: white;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+
+#registration-form h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    margin-right: 25px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 8px;
+    display: block;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #fafafa;
+    transition: border-color 0.3s ease;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button.btn {
+    width: 100%;
+    background-color: #ddff00;
+    color: rgb(0, 0, 0);
+    padding: 12px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #f67eff;
+}
+
+/* Students Record */
+
+#studentRecords h2 {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 2;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: #007bff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+table thead {
+    position: sticky;
+    width: 100%;
+    top: 50px;
+    background-color: white;
+    z-index: 1;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+th {
+    background-color: #ddff00;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+}
+
+td {
+    background-color: #f9f9f9;
+}
+
+button.edit, button.delete {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+button.edit {
+    background-color: #007bff;
+    margin-right: 5px;
+}
+
+button.delete {
+    background-color: #ff0019;
+}
+
+button.edit:hover {
+    background-color: #004cff;
+}
+
+button.delete:hover {
+    background-color: #cc0216;
+}
+
+/* Media Query */
+
+@media screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .registration-container, .records-container {
+        width: 100%;
+    }
+}
